@@ -1,9 +1,6 @@
 /* globalt css dokument */
 
 :root {
-  background-color: var(--primary);
-  background-image: var(--dust);
-
   /*---farver, color styles og effekter---*/
   --primary: #23073e;
   --secondary: #ff4320;
@@ -21,72 +18,90 @@
   --grad_card: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   --navdust: #ff4320;
   --DS_card: box-shadow: 2px 2px 4.800000190734863px rgba(0, 0, 0, 0.05);
-  --dust: url("./public/dust.svg");
-
-  /*---typografi og tekst størrelser----*/
-  .h1,
-  h1 {
-    font-size: 28px;
-    font-family: Futura, sans-serif;
-    font-weight: 700;
-    line-height: 150;
-  }
-  .h2,
-  h2 {
-    font-size: 24px;
-    font-family: Futura, sans-serif;
-    font-weight: 700;
-    line-height: 150;
-  }
-  .h3,
-  h3 {
-    font-size: 20px;
-    font-family: Futura, sans-serif;
-    font-weight: 500;
-    line-height: 120.00000476837158;
-  }
-  .p,
-  p {
-    font-size: 16px;
-    font-family: Futura, sans-serif;
-    font-weight: 500;
-    line-height: 100;
-  }
-  .p2,
-  p2 {
-    font-size: 12px;
-    font-family: Futura, sans-serif;
-    font-weight: 500;
-    line-height: 100;
-  }
-
-  /*
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }*/
+  --dust: url("/dust.svg");
 }
 
+/*---typografi og tekst størrelser----*/
+.h1,
+h1 {
+  font-size: 28px;
+  font-family: Futura, sans-serif;
+  font-weight: 700;
+  line-height: 150;
+}
+.h2,
+h2 {
+  font-size: 24px;
+  font-family: Futura, sans-serif;
+  font-weight: 700;
+  line-height: 150;
+}
+.h3,
+h3 {
+  font-size: 20px;
+  font-family: Futura, sans-serif;
+  font-weight: 500;
+  line-height: 120.00000476837158;
+}
+.p,
+p {
+  font-size: 16px;
+  font-family: Futura, sans-serif;
+  font-weight: 500;
+  line-height: 100;
+}
+.p2,
+p2 {
+  font-size: 12px;
+  font-family: Futura, sans-serif;
+  font-weight: 500;
+  line-height: 100;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+}
+
+#root {
+  width: min(390px, 100%);
+  height: min(844px, 100%);
+  max-width: 390px;
+  max-height: 844px;
+  overflow: auto;
+  border-radius: 20px; /* valgfrit, giver telefon-look */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  background: var(--primary); /* baggrund for app-området */
+  -webkit-overflow-scrolling: touch;
+  border: white;
+  z-index: 1;
+}
+
+body {
+  position: relative; /* sørger for at pseudo-elementet placeres korrekt */
+}
+
+/* Dust overlay med 80% opacity */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--dust);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.6; /* 60% */
+  z-index: -1; /* placerer billedet bag indholdet */
+}
+
+/* reacts starterpakke css, skal måske bruges til inspiration senere*/
 /*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
 body {
   margin: 0;
 }
