@@ -1,37 +1,71 @@
 /* globalt css dokument */
 
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  background-color: var(--primary);
+  background-image: var(--dust);
 
-  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
-  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /*---farver, color styles og effekter---*/
+  --primary: #23073e;
+  --secondary: #ff4320;
+  --accent1: #ff9401;
+  --accent2: #ffe12f;
+  --accent3: #ff7cfb;
+  --primarytext: #ffffff;
+  --secondarytext: rgba(255, 255, 255, 0.9);
+  --cardtext: #120000;
+  --third: #0bd3a0;
+  --iconcolor: #000000;
+  --progressbar: rgba(229, 229, 229, 0.2);
+  --bar_open: #2be406;
+  --bar_closed: #ff0000;
+  --grad_card: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  --navdust: #ff4320;
+  --DS_card: box-shadow: 2px 2px 4.800000190734863px rgba(0, 0, 0, 0.05);
+  --dust: url("./public/dust.svg");
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+  /*---typografi og tekst størrelser----*/
+  .h1,
+  h1 {
+    font-size: 28px;
+    font-family: Futura, sans-serif;
+    font-weight: 700;
+    line-height: 150;
+  }
+  .h2,
+  h2 {
+    font-size: 24px;
+    font-family: Futura, sans-serif;
+    font-weight: 700;
+    line-height: 150;
+  }
+  .h3,
+  h3 {
+    font-size: 20px;
+    font-family: Futura, sans-serif;
+    font-weight: 500;
+    line-height: 120.00000476837158;
+  }
+  .p,
+  p {
+    font-size: 16px;
+    font-family: Futura, sans-serif;
+    font-weight: 500;
+    line-height: 100;
+  }
+  .p2,
+  p2 {
+    font-size: 12px;
+    font-family: Futura, sans-serif;
+    font-weight: 500;
+    line-height: 100;
+  }
+  /*
   @media (max-width: 1024px) {
     font-size: 16px;
-  }
+  }*/
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -111,3 +145,4 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+*/
