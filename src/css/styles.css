@@ -1,6 +1,8 @@
 /* globalt css dokument */
 
 :root {
+  color: var(--primarytext);
+
   /*---farver, color styles og effekter---*/
   --primary: #23073e;
   --secondary: #ff4320;
