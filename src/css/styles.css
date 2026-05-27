@@ -1,9 +1,6 @@
 /* globalt css dokument */
 
 :root {
-  background-color: var(--primary);
-  background-image: var(--dust);
-
   /*---farver, color styles og effekter---*/
   --primary: #23073e;
   --secondary: #ff4320;
@@ -21,7 +18,7 @@
   --grad_card: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   --navdust: #ff4320;
   --DS_card: box-shadow: 2px 2px 4.800000190734863px rgba(0, 0, 0, 0.05);
-  --dust: url("./public/dust.svg");
+  --dust: url("/dust.svg");
 
   /*---typografi og tekst størrelser----*/
   .h1,
@@ -64,6 +61,59 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }*/
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #000; /* black overflow/background */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers #root in the viewport */
+  overflow: hidden; /* hide page scroll and ensure rounded corners are visible */
+}
+
+#root {
+  /* size limit for iPhone 14 */
+  width: 390px;
+  height: 844px;
+  max-width: none;
+  margin: 0; /* centered by body flexbox */
+  text-align: center;
+  border-inline: 1px solid black;
+  border-radius: 30px;
+  overflow: hidden; /* ensure child content doesn't overflow the rounded corners */
+
+  /* ensure internal layout still works */
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  /* needed for the dust pseudo-element */
+  position: relative;
+  background-color: var(--primary);
+}
+
+/* dust background with 60% opacity */
+#root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--dust);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.6; /* 60% opacity */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ensure page content sits above the dust layer */
+#root > * {
+  position: relative;
+  z-index: 1;
 }
 
 /*
