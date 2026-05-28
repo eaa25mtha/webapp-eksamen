@@ -73,10 +73,13 @@ body {
   overflow: hidden; /* hide page scroll and ensure rounded corners are visible */
 }
 
+/* ...existing code... */
 #root {
-  /* size limit for iPhone 14 */
+  /* fixed design size (keeps internal spacing identical across pages) */
   width: 390px;
   height: 844px;
+
+  /* visual styling */
   max-width: none;
   margin: 0; /* centered by body flexbox */
   text-align: center;
@@ -84,16 +87,25 @@ body {
   border-radius: 30px;
   overflow: hidden; /* ensure child content doesn't overflow the rounded corners */
 
-  /* ensure internal layout still works */
+  /* layout inside the phone */
   min-height: auto;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 
-  /* needed for the dust pseudo-element */
   position: relative;
   background-color: var(--primary);
+
+  /* scale to fit the viewport while preserving aspect ratio:
+     choose the smallest scale that fits width and height so the phone
+     never stretches and spacing stays consistent */
+  transform-origin: center center;
+  transform: scale(min(1, calc(100vw / 390), calc(100vh / 844)));
+  -webkit-transform-origin: center center;
+  -webkit-transform: scale(min(1, calc(100vw / 390), calc(100vh / 844)));
+  will-change: transform;
 }
+/* ...existing code... */
 
 /* dust background with 60% opacity */
 #root::before {
