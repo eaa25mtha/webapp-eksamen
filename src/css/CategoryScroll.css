@@ -7,6 +7,9 @@
   padding: 12px 0;
   overflow-x: auto; /* tillader horisontalt scroll */
   overflow-y: hidden;
-  -webkit-overflow-scrolling: touch; /* glidende scroll på touch */
   scroll-behavior: smooth;
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none;
 }
