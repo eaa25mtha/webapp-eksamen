@@ -4,7 +4,7 @@ import SwitchOn from "../assets/switchOn.svg";
 import SwitchOff from "../assets/switchOff.svg";
 
 export default function SearchSwitch() {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
 
   return (
     <img

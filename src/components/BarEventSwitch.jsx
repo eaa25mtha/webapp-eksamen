@@ -4,7 +4,7 @@ import SwitchOn from "../assets/switchOn2.svg";
 import SwitchOff from "../assets/switchOff2.svg";
 
 export default function BarEventSwitch() {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
 
   return (
     <img
