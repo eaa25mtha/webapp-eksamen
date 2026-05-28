@@ -29,35 +29,35 @@ h1 {
   font-size: 28px;
   font-family: Futura, sans-serif;
   font-weight: 700;
-  line-height: 150;
+  line-height: 1.2;
 }
 .h2,
 h2 {
   font-size: 24px;
   font-family: Futura, sans-serif;
   font-weight: 700;
-  line-height: 150;
+  line-height: 1.25;
 }
 .h3,
 h3 {
   font-size: 20px;
   font-family: Futura, sans-serif;
   font-weight: 500;
-  line-height: 120.00000476837158;
+  line-height: 1.25;
 }
 .p,
 p {
   font-size: 16px;
   font-family: Futura, sans-serif;
   font-weight: 500;
-  line-height: 100;
+  line-height: 1.4;
 }
 .p2,
 p2 {
   font-size: 12px;
   font-family: Futura, sans-serif;
   font-weight: 500;
-  line-height: 100;
+  line-height: 1.2;
 }
 
 html,
