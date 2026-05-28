@@ -7,7 +7,6 @@ import profileIcon from "../assets/nav/profile.svg";
 export default function NavBar() {
   return (
     <>
-      <h1>My Website</h1>
       <nav>
         <NavLink
           to="/"
