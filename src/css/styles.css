@@ -21,6 +21,8 @@
   --navdust: #ff4320;
   --DS_card: box-shadow: 2px 2px 4.800000190734863px rgba(0, 0, 0, 0.05);
   --dust: url("/dust.svg");
+
+  --activeNav: url("../assets/nav/navCirkel.svg");
 }
 
 /*---typografi og tekst størrelser----*/
@@ -111,7 +113,7 @@ body {
 #root > * {
   position: relative;
   z-index: 1;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /*
