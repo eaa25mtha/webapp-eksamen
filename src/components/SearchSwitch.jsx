@@ -1,5 +1,16 @@
-/*import { Navlink } from "react-router";*/
+import { useState } from "react";
+
+import SwitchOn from "../assets/switchOn.svg";
+import SwitchOff from "../assets/switchOff.svg";
 
 export default function SearchSwitch() {
-  return <div></div>;
+  const [active, setActive] = useState(false);
+
+  return (
+    <img
+      src={active ? SwitchOn : SwitchOff}
+      alt="switch"
+      onClick={() => setActive(!active)}
+    />
+  );
 }
