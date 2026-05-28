@@ -3,6 +3,7 @@ import CategoryCocktail from "./category-btns/CategoryCocktail";
 import CategorySport from "./category-btns/CategorySport";
 import CategoryNat from "./category-btns/CategoryNat";
 import CategoryAndre from "./category-btns/CategoryAndre";
+import "../css/categoryScroll.css";
 
 export default function CategoryScroll() {
   return (

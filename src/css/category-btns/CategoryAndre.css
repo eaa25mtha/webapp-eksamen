@@ -2,6 +2,7 @@
   display: inline-flex; /* så bredde/højde og align-items virker */
   align-items: center;
   cursor: pointer; /* gør hele label klikbar */
+  flex: 0 0 auto; /* forhindrer krympning */
 }
 
 /* input før span så vi kan style span når checked, gjort usynlig */
