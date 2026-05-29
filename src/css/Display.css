@@ -45,11 +45,18 @@
 
 .display {
   display: flex;
-  align-items: space-between;
+  flex-direction: column;
   justify-content: center;
   overflow: hidden;
   height: 70vh;
   width: 100%;
+}
+
+.filter-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 16px;
+  overflow: auto;
 }
 
 .cocktailbar {
