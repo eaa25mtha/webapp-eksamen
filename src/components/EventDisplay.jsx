@@ -7,11 +7,11 @@ const URL = import.meta.env.VITE_SUPABASE_URL;
 const APIKEY = import.meta.env.VITE_SUPABASE_APIKEY;
 
 export default function EventDisplay() {
-  const [events, setEvents] = useState([]);
+  const [bars, setBars] = useState([]);
 
   //henter data med useEffect og fetch fra Supabase
   useEffect(() => {
-    async function loadEvents() {
+    async function loadBars() {
       const response = await fetch(URL, {
         headers: {
           apikey: APIKEY,
@@ -21,19 +21,21 @@ export default function EventDisplay() {
       const data = await response.json();
       console.log(data);
 
-      setEvents(data);
+      setBars(data);
     }
-    loadEvents();
+    loadBars();
   }, []);
 
-  if (!events) return <p>Loading...</p>;
+  if (!bars) return <p>Loading...</p>;
 
   //det der vises på homepage fra vores component, BarCard
   return (
     <div className="display">
-      {events.map((event) => (
-        <EventCard key={event.id} event={event} />
-      ))}
+      <div className="card-container">
+        {bars.map((bar) => (
+          <EventCard key={bar.id} bar={bar} />
+        ))}
+      </div>
     </div>
   );
 }
