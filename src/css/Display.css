@@ -45,7 +45,7 @@
 
 .display {
   display: flex;
-  align-items: center;
+  align-items: space-between;
   justify-content: center;
   overflow: hidden;
   height: 73vh;
