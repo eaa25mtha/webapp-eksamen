@@ -31,9 +31,11 @@ export default function BarDisplay() {
   //det der vises på homepage fra vores component, BarCard
   return (
     <div className="display">
-      {bars.map((bar) => (
-        <BarCard key={bar.id} bar={bar} />
-      ))}
+      <div className="card-container">
+        {bars.map((bar) => (
+          <BarCard key={bar.id} bar={bar} />
+        ))}
+      </div>
     </div>
   );
 }
