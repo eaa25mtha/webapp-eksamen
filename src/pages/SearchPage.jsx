@@ -1,11 +1,11 @@
 import SearchSwitch from "../components/SearchSwitch";
 import EventDisplay from "../components/EventDisplay";
+import SearchBar from "../components/SearchBar";
 
 export default function SearchPage() {
   return (
     <div>
-      <h1>search page</h1>
-
+      <SearchBar />
       <SearchSwitch />
       <EventDisplay />
     </div>
