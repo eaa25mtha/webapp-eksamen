@@ -38,28 +38,28 @@ h2 {
   font-size: 24px;
   font-family: Futura, sans-serif;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 0.8;
 }
 .h3,
 h3 {
   font-size: 20px;
   font-family: Futura, sans-serif;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1;
 }
 .p,
 p {
   font-size: 16px;
   font-family: Futura, sans-serif;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 0.01;
 }
 .p2,
 p2 {
   font-size: 12px;
   font-family: Futura, sans-serif;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 html,

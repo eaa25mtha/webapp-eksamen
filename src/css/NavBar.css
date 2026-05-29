@@ -9,6 +9,7 @@ nav {
   padding: 8px 12px;
   gap: 8px;
   overflow: visible; /* allow indicator to overflow */
+  margin-top: -16px;
 }
 
 nav a {
