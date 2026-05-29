@@ -46,7 +46,7 @@ nav a img {
   background-size: contain;
   pointer-events: none;
   transition: left 300ms cubic-bezier(0.22, 0.9, 0.35, 1);
-  z-index: 2; /* behind links but above background */
+  z-index: 3; /* behind links but above background */
   will-change: left;
 }
 
