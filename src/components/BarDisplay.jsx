@@ -1,5 +1,6 @@
 import BarCard from "./BarCard";
 import { useState, useEffect } from "react";
+import "../css/Display.css";
 
 //env variabler
 const URL = import.meta.env.VITE_SUPABASE_URL;
@@ -18,6 +19,8 @@ export default function BarDisplay() {
         },
       });
       const data = await response.json();
+      console.log(data);
+
       setBars(data);
     }
     loadBars();
@@ -27,7 +30,7 @@ export default function BarDisplay() {
 
   //det der vises på homepage fra vores component, BarCard
   return (
-    <div>
+    <div className="display">
       {bars.map((bar) => (
         <BarCard key={bar.id} bar={bar} />
       ))}
