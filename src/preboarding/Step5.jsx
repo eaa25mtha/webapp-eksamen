@@ -1,5 +1,4 @@
 import "./css/Preboarding.css";
-//import preboardingKort from "../assets/preboardingKort.svg";
 import signUp1 from "../assets/signUp1.svg";
 import signUp2 from "../assets/signUp2.svg";
 import signUp3 from "../assets/signUp3.svg";
