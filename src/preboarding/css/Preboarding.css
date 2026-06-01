@@ -8,6 +8,7 @@
 }
 
 .step button {
+  cursor: pointer; /* til desktop view udelukkende */
   font-size: 24px;
   font-family: Futura, sans-serif;
   font-weight: 700;
@@ -26,6 +27,23 @@
   margin: 0 auto;
 }
 
+/* step 3 */
 .carousel {
   width: 100%;
+}
+
+/* step 4 */
+.kort img {
+  width: 80%;
+  height: 50%;
+}
+
+.step4-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.later-btn {
+  cursor: pointer;
 }
