@@ -1,8 +1,21 @@
+import "./css/Preboarding.css";
+import Lottie from "lottie-react";
+import step2animation from "../../lottie.json/prop-carrusel.json";
+
 export default function Step2({ onNext }) {
   return (
     <div className="step">
-      <h2>Step 2</h2>
-      <button onClick={onNext}>Næste</button>
+      <div className="top">
+        <h1>Bytur gjort simpelt</h1>
+      </div>
+      <div className="middle">
+        <div className="lottie-container">
+          <Lottie animationData={step2animation} loop={true} />
+        </div>
+      </div>
+      <div className="bottom">
+        <button onClick={onNext}>Næste</button>
+      </div>
     </div>
   );
 }
