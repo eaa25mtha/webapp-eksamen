@@ -1,4 +1,5 @@
 import "./css/Preboarding.css";
+import logo from "/public/logo-white.svg";
 
 export default function Step1({ onNext }) {
   return (
@@ -8,9 +9,9 @@ export default function Step1({ onNext }) {
       </div>
       <div className="middle">
         <div className="logo">
-          <img src="../../public/logo-white.svg" alt="PubHub" width="100%" />
+          <img src={logo} alt="PubHub" width="100%" />
         </div>
-        <h3>Se på ikonerne, hvad de forskellige barer tilbyder</h3>
+        <h3>Hele Aarhus' byliv i én app</h3>
       </div>
       <div className="bottom">
         <button onClick={onNext}>Næste</button>

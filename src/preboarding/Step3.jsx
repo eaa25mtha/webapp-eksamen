@@ -17,22 +17,15 @@ export default function Step3({ onNext }) {
       <div className="middle">
         <div className="lottie-container carousel">
           {" "}
-          <Lottie animationData={carousel3} loop />
-        </div>
-
-        <div className="lottie-container carousel">
-          {" "}
-          <Lottie animationData={carousel1} loop />
-        </div>
-
-        <div className="lottie-container carousel">
-          {" "}
+          <Lottie animationData={carousel3} loop />{" "}
+          <Lottie animationData={carousel1} loop />{" "}
           <Lottie animationData={carousel2} loop />
         </div>
-
-        <h3>
-          Kig i vores event cards og find den helt rigtige aktivitet til dig
-        </h3>
+        <div className="text-container">
+          <h3>
+            Kig i vores event cards og find den helt rigtige aktivitet til dig
+          </h3>
+        </div>
       </div>
       <div className="bottom">
         <button onClick={onNext}>Næste</button>

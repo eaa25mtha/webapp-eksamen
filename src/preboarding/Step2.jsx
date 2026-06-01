@@ -15,7 +15,9 @@ export default function Step2({ onNext }) {
           {" "}
           <Lottie animationData={step2animation} loop />
         </div>
-        <h3>Se på ikonerne, hvad de forskellige barer tilbyder</h3>
+        <div className="text-container">
+          <h3>Se på ikonerne, hvad de forskellige barer tilbyder</h3>
+        </div>
       </div>
       <div className="bottom">
         <button onClick={onNext}>Næste</button>

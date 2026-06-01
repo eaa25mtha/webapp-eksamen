@@ -9,7 +9,9 @@ export default function Step4({ onNext }) {
       </div>
       <div className="middle kort">
         <img src={preboardingKort} alt="Kort" />
-        <h3>Med delt lokation kan du se alle barerene nær dig</h3>
+        <div className="text-container">
+          <h3>Med delt lokation kan du se alle barerene nær dig</h3>
+        </div>
       </div>
       <div className="bottom step4-bottom">
         <p2 className="later-btn" onClick={onNext}>
