@@ -52,3 +52,19 @@
   margin: 0;
   padding: 0;
 }
+
+/* step 4 */
+.kort img {
+  width: 80%;
+  height: 50%;
+}
+
+.step4-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.later-btn {
+  cursor: pointer;
+}
