@@ -87,3 +87,21 @@
 .later-btn {
   cursor: pointer;
 }
+
+/*step 5*/
+.step5-button {
+  background-color: var(
+    --progressbar
+  ) !important; /* overskriver den oprindelige button farve */
+}
+
+.step5-user {
+  width: 100px;
+  border-radius: 360px;
+  background-color: var(--primarytext);
+  overflow: hidden;
+}
+
+.step5-middle {
+  gap: 20px;
+}
