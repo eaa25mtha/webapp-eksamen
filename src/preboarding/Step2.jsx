@@ -1,8 +1,10 @@
 import "./css/Preboarding.css";
-import Lottie from "lottie-react";
-import step2animation from "../../lottie.json/prop-carrusel.json";
+import LottieModule from "lottie-react";
+import step2animation from "../animations/prop-carrusel.json";
 
 export default function Step2({ onNext }) {
+  const Lottie = LottieModule.default;
+
   return (
     <div className="step">
       <div className="top">
@@ -10,8 +12,10 @@ export default function Step2({ onNext }) {
       </div>
       <div className="middle">
         <div className="lottie-container">
-          <Lottie animationData={step2animation} loop={true} />
+          {" "}
+          <Lottie animationData={step2animation} loop />
         </div>
+        <h3>Se på ikonerne, hvad de forskellige barer tilbyder</h3>
       </div>
       <div className="bottom">
         <button onClick={onNext}>Næste</button>
