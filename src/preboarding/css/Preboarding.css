@@ -10,7 +10,6 @@
 }
 
 .step button {
-  cursor: pointer; /* til desktop view udelukkende */
   font-size: 24px;
   font-family: Futura, sans-serif;
   font-weight: 700;
