@@ -1,0 +1,97 @@
+.bar-marker {
+  background-color: #ffcc00;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: var(--primary); /* din farve */
+  color: var(--primarytext);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.leaflet-popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--primarytext);
+  border-radius: 12px;
+}
+
+.vibe-check {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--primarytext);
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.bar-details {
+  display: flex;
+  gap: 5px;
+}
+.info {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+}
+
+.facilities {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  padding-top: 0;
+}
+
+.facilities-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.read-more {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  button {
+    background-color: var(--primary);
+    color: var(--primarytext);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.info-details {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: center;
+  height: 24px;
+}
