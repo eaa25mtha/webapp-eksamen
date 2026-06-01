@@ -1,20 +1,35 @@
+// ...existing code...
 import "../preboarding/css/Preboarding.css";
-import Lottie from "lottie-react";
+import LottieModule from "lottie-react";
 
 import carousel1 from "../animations/carousel1.json";
 import carousel2 from "../animations/carousel2.json";
 import carousel3 from "../animations/carousel3.json";
 
 export default function Step3({ onNext }) {
+  const Lottie = LottieModule.default;
+
   return (
     <div className="step">
       <div className="top">
         <h1>Find events</h1>
       </div>
       <div className="middle">
-        <Lottie animationData={carousel1} loop={true} />
-        <Lottie animationData={carousel2} loop={true} />
-        <Lottie animationData={carousel3} loop={true} />
+        <div className="lottie-container carousel">
+          {" "}
+          <Lottie animationData={carousel3} loop />
+        </div>
+
+        <div className="lottie-container carousel">
+          {" "}
+          <Lottie animationData={carousel1} loop />
+        </div>
+
+        <div className="lottie-container carousel">
+          {" "}
+          <Lottie animationData={carousel2} loop />
+        </div>
+
         <h3>
           Kig i vores event cards og find den helt rigtige aktivitet til dig
         </h3>
