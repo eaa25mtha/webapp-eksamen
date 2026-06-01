@@ -1,8 +1,17 @@
 export default function Step6({ onNext }) {
   return (
     <div className="step">
-      <h2>Step 6</h2>
-      <button onClick={onNext}>Næste</button>
+      <div className="top">
+        <h1>Hvad leder du efter?</h1>
+      </div>
+      <div className="middle">
+        <div className="text-container">
+          <h3>*her indsættes filtre*</h3>
+        </div>
+      </div>
+      <div className="bottom">
+        <button onClick={onNext}>Næste</button>
+      </div>
     </div>
   );
 }
