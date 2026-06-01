@@ -6,6 +6,7 @@ import SearchPage from "./pages/SearchPage";
 import ChatPage from "./pages/ChatPage";
 import ProfilePage from "./pages/ProfilePage";
 import { useState } from "react";
+import Preboarding from "./preboarding/Preboarding";
 
 export default function App() {
   const [showOnboarding, setShowOnboarding] = useState(() => {
@@ -26,13 +27,7 @@ export default function App() {
   return (
     <>
       {showOnboarding ? (
-        <div className="onboarding">
-          <h1>Velkommen!</h1>
-
-          <p>Her er en hurtig introduktion</p>
-
-          <button onClick={closeOnboarding}>Kom i gang</button>
-        </div>
+        <Preboarding onFinish={closeOnboarding} />
       ) : (
         <div className="App">
           <Routes>
