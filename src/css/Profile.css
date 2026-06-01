@@ -1,0 +1,59 @@
+.user {
+  width: 100px;
+  border-radius: 360px;
+  background-color: var(--primarytext);
+  overflow: hidden;
+}
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+.edit-profile-button {
+  font-size: 16px;
+  font-family: Futura, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0.1em 0 8px 0;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--secondary);
+  color: var(--primarytext);
+  padding: 16px;
+  width: 140px;
+}
+
+.button {
+  font-size: 16px;
+  font-family: Futura, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0.4em 0;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--secondary);
+  color: var(--iconcolor);
+  padding: 16px;
+  width: 340px;
+  height: 60px;
+}
+
+.button1 {
+  background-color: var(--accent1);
+}
+
+.button2 {
+  background-color: var(--third);
+}
+
+.button3 {
+  background-color: var(--accent2);
+}
+
+.button4 {
+  background-color: var(--accent3);
+}
