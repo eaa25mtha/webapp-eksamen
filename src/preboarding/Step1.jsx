@@ -1,5 +1,5 @@
 import "./css/Preboarding.css";
-import logo from "/public/logo-white.svg";
+import logo from "/logo-white.svg";
 
 export default function Step1({ onNext }) {
   return (
