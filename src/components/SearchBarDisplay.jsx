@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import BarCard from "./BarCard";
 import EventCard from "./EventCard";
 import "../css/Display.css";
+import ErrorContent from "./ErrorContent";
 
 //env variabler
 const URL = import.meta.env.VITE_SUPABASE_URL;
@@ -34,6 +35,9 @@ export default function SearchBarDisplay({ query }) {
       bar.type?.toLowerCase().includes(query.toLowerCase()) ||
       bar.event_name?.toLowerCase().includes(query.toLowerCase()),
   );
+  if (filteredBars.length === 0) {
+    return <ErrorContent />;
+  }
 
   return (
     <div>
