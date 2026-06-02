@@ -7,6 +7,7 @@ import ChatPage from "./pages/ChatPage";
 import ProfilePage from "./pages/ProfilePage";
 import { useState } from "react";
 import Preboarding from "./preboarding/Preboarding";
+import BarDetailPage from "./pages/BarDetailPage";
 
 export default function App() {
   const [showOnboarding, setShowOnboarding] = useState(() => {
@@ -35,6 +36,8 @@ export default function App() {
             <Route path="/search" element={<SearchPage />} />
             <Route path="/chat" element={<ChatPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/:id" element={<BarDetailPage />} />
+            <Route path="/:event_name" element={<BarDetailPage />} />
           </Routes>
 
           <NavBar />
