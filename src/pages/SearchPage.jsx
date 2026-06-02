@@ -1,11 +1,9 @@
-import SearchContent from "../components/SearchContent";
-import SearchBar from "../components/SearchBar";
+import SearchPageContent from "../components/SearchPageContent";
 
 export default function SearchPage() {
   return (
     <div>
-      <SearchBar />
-      <SearchContent />
+      <SearchPageContent />
     </div>
   );
 }
