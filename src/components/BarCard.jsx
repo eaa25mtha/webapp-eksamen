@@ -8,7 +8,7 @@ export default function BarCard({ bar }) {
     : "default";
 
   return (
-    <Link to={`/${bar.name_bar}`} className={`card ${typeClass}`}>
+    <Link to={`/${bar.id}`} className={`card ${typeClass}`}>
       <div className="card-body">
         <div className="container-left">
           <h2 className="h2">{bar.name_bar || "Intet bar navn"}</h2>
