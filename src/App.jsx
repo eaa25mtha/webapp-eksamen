@@ -8,6 +8,8 @@ import ProfilePage from "./pages/ProfilePage";
 import { useState } from "react";
 import Preboarding from "./preboarding/Preboarding";
 import BarDetailPage from "./pages/BarDetailPage";
+import FavoritesPage from "./pages/FavoritesPage.jsx";
+import ErrorPage from "./pages/ErrorPage";
 
 export default function App() {
   const [showOnboarding, setShowOnboarding] = useState(() => {
@@ -38,6 +40,8 @@ export default function App() {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/:id" element={<BarDetailPage />} />
             <Route path="/:event_name" element={<BarDetailPage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
 
           <NavBar />
