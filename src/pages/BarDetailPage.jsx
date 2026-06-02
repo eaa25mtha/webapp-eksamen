@@ -94,7 +94,17 @@ export default function BarDetailPage() {
         onClick={() => navigate(-1)}
         className="back-button"
       />
-      <Favorite bar={bar} />
+      {/*<favorite komponenten ejer newValue så det ikke er lokalt storage, men gennem databasen />*/}
+      <Favorite
+        isFavorite={bar.favorite}
+        barId={bar.id}
+        onToggle={(newValue) =>
+          setBar({
+            ...bar,
+            favorite: newValue,
+          })
+        }
+      />
       <div>{/*<img src={bar.background_bar} alt={bar.name_bar} />*/}</div>
       <div>
         <img src={bar.logo} alt={bar.name_bar} />
