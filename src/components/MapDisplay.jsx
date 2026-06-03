@@ -8,6 +8,7 @@ import vibe2 from "../assets/vibe2.png";
 import vibe3 from "../assets/vibe3.png";
 import vibe4 from "../assets/vibe4.png";
 import star from "../assets/popupstar.svg";
+import { Link } from "react-router";
 
 //env variabler
 const URL = import.meta.env.VITE_SUPABASE_URL;
@@ -103,7 +104,9 @@ export default function MapDisplay() {
               </div>
             </div>
             <div className="read-more">
-              <button>Læs mere</button>
+              <Link to={`/${bar.id}`}>
+                <button>Læs mere</button>
+              </Link>
             </div>
           </Popup>
         </Marker>

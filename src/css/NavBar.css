@@ -5,7 +5,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   color: var(--primarytext);
-  z-index: 3; /* above the dust pseudo-element */
+  z-index: 9999; /* above the dust pseudo-element */
   padding: 8px 12px;
   gap: 8px;
   overflow: visible; /* allow indicator to overflow */

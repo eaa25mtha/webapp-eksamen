@@ -4,6 +4,7 @@
   width: 100%;
   margin-top: -0px; /* fjernet -40px */
   z-index: 5;
+  overflow: hidden;
 }
 
 .header {
@@ -67,8 +68,12 @@
 }
 
 .properties {
+  margin: -16px;
+  width: 116%;
+  height: fit-content;
+  padding-bottom: 16px;
   display: flex;
-  gap: 12px;
+  gap: 16px;
   margin-top: 16px;
-  overflow: auto;
+  overflow: auto scroll;
 }
