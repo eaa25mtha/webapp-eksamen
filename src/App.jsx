@@ -33,16 +33,18 @@ export default function App() {
         <Preboarding onFinish={closeOnboarding} />
       ) : (
         <div className="App">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/search" element={<SearchPage />} />
-            <Route path="/chat" element={<ChatPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/:id" element={<BarDetailPage />} />
-            <Route path="/:event_name" element={<BarDetailPage />} />
-            <Route path="/favorites" element={<FavoritesPage />} />
-            <Route path="*" element={<ErrorPage />} />
-          </Routes>
+          <main className="content">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/chat" element={<ChatPage />} />
+              <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/:id" element={<BarDetailPage />} />
+              <Route path="/:event_name" element={<BarDetailPage />} />
+              <Route path="/favorites" element={<FavoritesPage />} />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </main>
 
           <NavBar />
         </div>

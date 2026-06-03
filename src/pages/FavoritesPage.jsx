@@ -34,7 +34,7 @@ export default function FavoritesPage() {
   }
 
   return (
-    <div>
+    <div className="container">
       <div className="card-container">
         {filteredBars.map((bar) => (
           <div className="card-container">

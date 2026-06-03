@@ -128,3 +128,9 @@ body {
   z-index: 1;
   overflow: visible;
 }
+
+.container {
+  padding-top: 32px;
+  height: 97vh;
+  overflow: hidden;
+}

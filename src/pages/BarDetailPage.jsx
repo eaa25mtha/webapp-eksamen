@@ -5,6 +5,7 @@ import star from "../assets/popupstar.svg";
 import { useNavigate } from "react-router-dom";
 import back from "../assets/back.svg";
 import Favorite from "../components/Favorite";
+import "../css/Detaljeside.css";
 
 //env variabler
 const URL = import.meta.env.VITE_SUPABASE_URL;
@@ -31,6 +32,7 @@ export default function BarDetailPage() {
     loadBar();
   }, [barId]);
 
+  //Her bliver alle properties koblet op på deres SVG
   const properties = [
     {
       field: "sport_prop",
@@ -87,52 +89,65 @@ export default function BarDetailPage() {
   ];
 
   return (
-    <div>
-      <img
-        src={back}
-        alt="Tilbage"
-        onClick={() => navigate(-1)}
-        className="back-button"
-      />
-      {/*<favorite komponenten ejer newValue så det ikke er lokalt storage, men gennem databasen />*/}
-      <Favorite
-        isFavorite={bar.favorite}
-        barId={bar.id}
-        onToggle={(newValue) =>
-          setBar({
-            ...bar,
-            favorite: newValue,
-          })
-        }
-      />
-      <div>{/*<img src={bar.background_bar} alt={bar.name_bar} />*/}</div>
-      <div>
-        <img src={bar.logo} alt={bar.name_bar} />
-      </div>
-      <h1>{bar.name_bar}</h1>
-      <div>
-        <p>{bar.type}</p>
-        <img src={line} alt="linje" />
-        <p>{bar.age_bar}</p>
-      </div>
-      <div>
-        <img src={star} alt="rating" />
-        <p>{bar.rating_google_bar}</p>
-      </div>
-      <div>
-        <p>{bar.openstatus_bar}</p>
-        <img src={line} alt="linje" />
-        <p>{bar.openhours_bar}</p>
-      </div>
-      <div className="properties">
-        {properties.map((prop) =>
-          bar[prop.field] ? (
-            <div key={prop.field} className="property">
-              <img src={prop.icon} alt={prop.label} />
-              <span>{prop.label}</span>
-            </div>
-          ) : null,
+    <div className="bar-detail-page">
+      <div className="header">
+        {bar?.background_bar && (
+          <img
+            className="header-bg-img"
+            src={bar.background_bar}
+            alt={`${bar.name_bar} baggrund`}
+            aria-hidden="true"
+          />
         )}
+        <div className="header-top">
+          <img
+            src={back}
+            alt="Tilbage"
+            onClick={() => navigate(-1)}
+            className="back-button"
+          />
+          {/*<favorite komponenten ejer newValue så det ikke er lokalt storage, men gennem databasen />*/}
+          <Favorite
+            isFavorite={bar.favorite}
+            barId={bar.id}
+            onToggle={(newValue) =>
+              setBar({
+                ...bar,
+                favorite: newValue,
+              })
+            }
+          />
+        </div>
+        <div>
+          <img src={bar.logo} alt={bar.name_bar} width={100} />
+        </div>
+      </div>
+      <div className="bar-detail-info">
+        <h1>{bar.name_bar}</h1>
+        <div className="details">
+          <p>{bar.type}</p>
+          <img src={line} alt="linje" />
+          <p>{bar.age_bar}</p>
+        </div>
+        <div className="details">
+          <img src={star} alt="rating" />
+          <p>{bar.rating_google_bar}</p>
+        </div>
+        <div className="details">
+          <p>{bar.openstatus_bar}</p>
+          <img src={line} alt="linje" />
+          <p>{bar.openhours_bar}</p>
+        </div>
+        <div className="properties">
+          {properties.map((prop) =>
+            bar[prop.field] ? (
+              <div key={prop.field} className="property">
+                <img src={prop.icon} alt={prop.label} />
+                <span>{prop.label}</span>
+              </div>
+            ) : null,
+          )}
+        </div>
       </div>
     </div>
   );

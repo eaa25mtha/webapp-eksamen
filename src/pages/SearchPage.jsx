@@ -1,8 +1,9 @@
 import SearchPageContent from "../components/SearchPageContent";
+import "../css/styles.css";
 
 export default function SearchPage() {
   return (
-    <div>
+    <div className="container">
       <SearchPageContent />
     </div>
   );

@@ -1,0 +1,74 @@
+.bar-detail-page {
+  background-color: var(--primary);
+  height: 100vh;
+  width: 100%;
+  margin-top: -0px; /* fjernet -40px */
+  z-index: 5;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+/* baggrund via background-image */
+.header-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* alternativ når du bruger <img> */
+.header-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.6);
+  z-index: 0;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  padding-top: 60px; /* ekstra top-padding for bedre placering */
+}
+
+/* indhold i header skal være over baggrunden */
+.header > .header-top,
+.header > div:not(.header-bg):not(.header-bg-img) {
+  position: relative;
+  z-index: 5;
+}
+
+.bar-detail-info {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 40px;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--primarytext);
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.properties {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  overflow: auto;
+}
