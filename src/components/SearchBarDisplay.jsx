@@ -39,16 +39,16 @@ export default function SearchBarDisplay({ query }) {
   }
 
   return (
-    <div>
+    <div className="display">
       <div className="card-container">
         {filteredBars.map((bar) => (
-          <div key={bar.id}>
+          <div className="card-search" key={bar.id}>
             {(bar.name_bar?.toLowerCase().includes(query.toLowerCase()) ||
               bar.type?.toLowerCase().includes(query.toLowerCase())) && (
-              <BarCard bar={bar} />
+              <BarCard className="search-container" bar={bar} />
             )}
             {bar.event_name?.toLowerCase().includes(query.toLowerCase()) && (
-              <EventCard bar={bar} />
+              <EventCard className="search-container" bar={bar} />
             )}
           </div>
         ))}

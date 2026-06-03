@@ -18,7 +18,7 @@ export default function HomePageContent() {
 
   // renderingen af indholdet og aktivering af de to states på knapperne
   return (
-    <div>
+    <div className="display-container">
       <div className="toggle-container">
         <button
           className={`toggle-button ${display === "bar" ? "active" : ""}`}
