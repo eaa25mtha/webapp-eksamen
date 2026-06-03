@@ -23,3 +23,36 @@
   padding: 0;
   background: transparent; /* så man ikke kan se søgefelt boksen */
 }
+
+/* toggle funktionen på søgesiden med de to knapper "Events" og "Kort" */
+
+.toggle-button {
+  flex: 1; /* knapperne deler pladsen i containeren*/
+  padding: 16px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--iconcolor);
+  cursor: pointer;
+  appearance: none;
+}
+
+/* fjerner standard margin på h3 inde i knappen */
+.toggle-button h3 {
+  margin: 0;
+}
+
+/* aktiv state */
+.toggle-button.active {
+  background-color: var(--accent1);
+}
+
+.toggle-container {
+  display: flex;
+  width: 95%;
+  margin: 12px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--primarytext);
+  box-shadow: none;
+}
