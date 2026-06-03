@@ -28,7 +28,7 @@ export default function SearchContent() {
           className={`toggle-button ${display === "bar" ? "active" : ""}`}
           onClick={toggleDisplayEvent}
         >
-          <h3>Barer</h3>
+          <h3>Søg</h3>
         </button>
         <button
           className={`toggle-button ${display === "map" ? "active" : ""}`}
