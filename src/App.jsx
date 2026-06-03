@@ -39,8 +39,8 @@ export default function App() {
               <Route path="/search" element={<SearchPage />} />
               <Route path="/chat" element={<ChatPage />} />
               <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/:id" element={<BarDetailPage />} />
-              <Route path="/:event_name" element={<BarDetailPage />} />
+              <Route path="/bar/:id" element={<BarDetailPage />} />
+              <Route path="/event/:event_name" element={<BarDetailPage />} />
               <Route path="/favorites" element={<FavoritesPage />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
