@@ -2,22 +2,44 @@ import { useState } from "react";
 import MapDisplay from "./MapDisplay";
 import SearchBarDisplay from "./SearchBarDisplay";
 import SearchBar from "./SearchBar";
+import "../css/SearchBarToggle.css";
 
 export default function SearchContent() {
-  const [display, setDisplay] = useState(true);
+  const [display, setDisplay] = useState("map");
   const [query, setQuery] = useState("");
 
-  function toggleDisplay() {
-    setDisplay(!display);
+  // skift til event
+  function toggleDisplayEvent() {
+    setDisplay("bar");
   }
 
+  // skift til kort
+  function toggleDisplayMap() {
+    setDisplay("map");
+  }
+
+  // renderingen af indholdet og aktivering af de to states på knapperne
   return (
     <div>
       <SearchBar query={query} setQuery={setQuery} />
-      <button onClick={toggleDisplay}>
-        <h2>Event</h2>
-      </button>
-      {display ? (
+
+      <div className="toggle-container">
+        <button
+          className={`toggle-button ${display === "bar" ? "active" : ""}`}
+          onClick={toggleDisplayEvent}
+        >
+          <h3>Barer</h3>
+        </button>
+        <button
+          className={`toggle-button ${display === "map" ? "active" : ""}`}
+          onClick={toggleDisplayMap}
+        >
+          <h3>Kort</h3>
+        </button>
+      </div>
+
+      {/* renderingen af kortet */}
+      {display === "map" ? (
         <MapDisplay query={query} />
       ) : (
         <SearchBarDisplay query={query} />

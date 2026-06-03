@@ -4,7 +4,7 @@ import Liked from "../assets/Liked.svg";
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const APIKEY = import.meta.env.VITE_SUPABASE_APIKEY;
 
-//funktionen henter baren, bruger PATCH til at ændrer favoritknappen og opdaterer den i SupaBase
+//funktionen henter baren, bruger PATCH til at ændre favoritknappen og opdaterer den i SupaBase
 export default function Favorite({ isFavorite, barId, onToggle }) {
   async function toggleFavorite() {
     const newValue = !isFavorite;

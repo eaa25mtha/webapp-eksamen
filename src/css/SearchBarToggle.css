@@ -1,0 +1,58 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 32px;
+  border-radius: 16px;
+  margin: 20px auto;
+  padding: 0 12px;
+  background: var(--primarytext);
+}
+
+.search-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px; /* skubber søg... teskten lidt til højre */
+  flex: none;
+}
+
+.search-input {
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0;
+  background: transparent; /* så man ikke kan se søgefelt boksen */
+}
+
+/* toggle funktionen på søgesiden med de to knapper "Events" og "Kort" */
+
+.toggle-button {
+  flex: 1; /* knapperne deler pladsen i containeren*/
+  padding: 16px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--iconcolor);
+  cursor: pointer;
+  appearance: none;
+}
+
+/* fjerner standard margin på h3 inde i knappen */
+.toggle-button h3 {
+  margin: 0;
+}
+
+/* aktiv state */
+.toggle-button.active {
+  background-color: var(--accent1);
+}
+
+.toggle-container {
+  display: flex;
+  width: 95%;
+  margin: 12px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--primarytext);
+  box-shadow: none;
+}

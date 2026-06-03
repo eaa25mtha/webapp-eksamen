@@ -1,4 +1,3 @@
-import "../css/SearchBar.css";
 import { useState, useEffect } from "react";
 import BarCard from "./BarCard";
 import EventCard from "./EventCard";

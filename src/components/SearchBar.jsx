@@ -1,13 +1,17 @@
-import "../css/SearchBar.css";
+import "../css/SearchBarToggle.css";
+import SearchIcon from "../assets/nav/search.svg";
 
 export default function SearchBar({ query, setQuery }) {
   return (
-    <input
-      className="search-bar"
-      type="text"
-      placeholder="Søg..."
-      value={query}
-      onChange={(e) => setQuery(e.target.value)}
-    />
+    <div className="search-bar">
+      <img className="search-icon" src={SearchIcon} alt="Search" />
+      <input
+        className="search-input"
+        type="text"
+        placeholder="Søg..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+    </div>
   );
 }
