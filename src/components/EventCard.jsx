@@ -7,7 +7,7 @@ export default function EventCard({ bar }) {
     : "default";
 
   return (
-    <Link to={`/${bar.id}`} className={`card ${typeClass}`}>
+    <Link to={`/event/${bar.id}`} className={`card ${typeClass}`}>
       <div className="card-body">
         <div className="container-left">
           <h2 className="h2">{bar.event_name || "Intet event navn"}</h2>
