@@ -1,4 +1,4 @@
-import "../css/SearchBar.css";
+import "../css/SearchBarToggle.css";
 import SearchIcon from "../assets/nav/search.svg";
 
 export default function SearchBar({ query, setQuery }) {

@@ -2,7 +2,7 @@ import { useState } from "react";
 import MapDisplay from "./MapDisplay";
 import SearchBarDisplay from "./SearchBarDisplay";
 import SearchBar from "./SearchBar";
-import "../css/SearchBar.css";
+import "../css/SearchBarToggle.css";
 
 export default function SearchContent() {
   const [display, setDisplay] = useState("map");
@@ -18,13 +18,12 @@ export default function SearchContent() {
     setDisplay("map");
   }
 
+  // renderingen af indholdet og aktivering af de to states på knapperne
   return (
-    //event/kort toggle
     <div>
       <SearchBar query={query} setQuery={setQuery} />
 
       <div className="toggle-container">
-        {/* css class der kun vises når bar er aktiv */}
         <button
           className={`toggle-button ${display === "bar" ? "active" : ""}`}
           onClick={toggleDisplayEvent}
