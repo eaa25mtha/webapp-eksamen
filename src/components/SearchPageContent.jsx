@@ -2,6 +2,7 @@ import { useState } from "react";
 import MapDisplay from "./MapDisplay";
 import SearchBarDisplay from "./SearchBarDisplay";
 import SearchBar from "./SearchBar";
+import "../css/SearchBar.css";
 
 export default function SearchContent() {
   const [display, setDisplay] = useState(true);
@@ -12,6 +13,7 @@ export default function SearchContent() {
   }
 
   return (
+    //event/kort toggle knappen
     <div>
       <SearchBar query={query} setQuery={setQuery} />
       <button onClick={toggleDisplay}>
