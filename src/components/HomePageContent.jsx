@@ -5,12 +5,12 @@ import "../css/SearchBarToggle.css";
 
 export default function HomePageContent() {
   const [display, setDisplay] = useState(() => {
-    return localStorage.getItem("display") || "event";
+    return localStorage.getItem("homeDisplay") || "event";
   });
 
   //når display ændres, gemmes den nye værdi
   useEffect(() => {
-    localStorage.setItem("display", display);
+    localStorage.setItem("homeDisplay", display);
   }, [display]);
 
   // skift til event
