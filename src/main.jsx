@@ -3,7 +3,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
-import "./css/Styles.css";
+import "./css/styles.css";
 import App from "./App.jsx";
 
 function updateRootScale() {
