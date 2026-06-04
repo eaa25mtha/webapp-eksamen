@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import line from "../assets/whiteline.svg";
 import star from "../assets/popupstar.svg";
@@ -14,7 +14,7 @@ const APIKEY = import.meta.env.VITE_SUPABASE_APIKEY;
 export default function BarDetailPage() {
   const [bar, setBar] = useState({});
   const params = useParams();
-  const barId = Number(params.id);
+  const barId = Number(params?.id) || null;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,8 +26,10 @@ export default function BarDetailPage() {
         },
       });
       const data = await response.json();
-      const barToDisplay = data.find((bar) => bar.id === barId);
-      setBar(barToDisplay);
+      const barToDisplay = Array.isArray(data)
+        ? data.find((b) => b?.id === barId)
+        : null;
+      setBar(barToDisplay || {});
     }
     loadBar();
   }, [barId]);
@@ -119,11 +121,13 @@ export default function BarDetailPage() {
           />
         </div>
         <div>
-          <img src={bar.logo} alt={bar.name_bar} width={100} />
+          {bar?.logo && (
+            <img src={bar.logo} alt={bar.name_bar ?? "Bar logo"} width={100} />
+          )}
         </div>
       </div>
       <div className="bar-detail-info">
-        <h1>{bar.name_bar}</h1>
+        <h1>{bar?.name_bar || ""}</h1>
         <div className="details">
           <p>{bar.type}</p>
           <img src={line} alt="linje" />
@@ -138,16 +142,18 @@ export default function BarDetailPage() {
           <img src={line} alt="linje" />
           <p>{bar.openhours_bar}</p>
         </div>
-        <div className="properties">
-          {properties.map((prop) =>
-            bar[prop.field] ? (
-              <div key={prop.field} className="property">
-                <img src={prop.icon} alt={prop.label} />
-                <span>{prop.label}</span>
-              </div>
-            ) : null,
-          )}
-        </div>
+        {bar && (
+          <div className="properties">
+            {properties.map((prop) =>
+              bar[prop.field] ? (
+                <div key={prop.field} className="property">
+                  <img src={prop.icon} alt={prop.label ?? prop.field} />
+                  <span>{prop.label ?? ""}</span>
+                </div>
+              ) : null,
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
