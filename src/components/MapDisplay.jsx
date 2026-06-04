@@ -20,7 +20,7 @@ export default function MapDisplay() {
   //henter data med useEffect og fetch fra Supabase
   useEffect(() => {
     async function loadBars() {
-      const response = await fetch(URL, {
+      const response = await fetch(URL + "/bars", {
         headers: {
           apikey: APIKEY,
           "Content-Type": "application/json",

@@ -1,7 +1,7 @@
 import NotLiked from "../assets/NotLiked.svg";
 import Liked from "../assets/Liked.svg";
 
-const URL = import.meta.env.VITE_SUPABASE_URL;
+const URL = import.meta.env.VITE_SUPABASE_URL + "/bars";
 const APIKEY = import.meta.env.VITE_SUPABASE_APIKEY;
 
 //funktionen henter baren, bruger PATCH til at ændre favoritknappen og opdaterer den i SupaBase

@@ -9,7 +9,7 @@ import CategoryBeer from "./category-btns/CategoryBeer";
 import CategoryAndre from "./category-btns/CategoryAndre";
 
 //env variabler
-const URL = import.meta.env.VITE_SUPABASE_URL;
+const URL = import.meta.env.VITE_SUPABASE_URL + "/bars";
 const APIKEY = import.meta.env.VITE_SUPABASE_APIKEY;
 
 export default function BarDisplay() {
