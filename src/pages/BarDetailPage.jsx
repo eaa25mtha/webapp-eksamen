@@ -19,7 +19,7 @@ export default function BarDetailPage() {
 
   useEffect(() => {
     async function loadBar() {
-      const response = await fetch(URL, {
+      const response = await fetch(URL + "/bars", {
         headers: {
           apikey: APIKEY,
           "Content-Type": "application/json",

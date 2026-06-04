@@ -14,7 +14,7 @@ export default function SearchBarDisplay({ query }) {
   //henter data på barerne
   useEffect(() => {
     async function loadBars() {
-      const response = await fetch(URL, {
+      const response = await fetch(URL + "/bars", {
         headers: {
           apikey: APIKEY,
           "Content-Type": "application/json",
