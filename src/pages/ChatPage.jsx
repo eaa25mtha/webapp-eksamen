@@ -1,9 +1,10 @@
 import "../css/styles.css";
+import ChatDisplay from "../components/ChatDisplay";
 
 export default function ChatPage() {
   return (
     <div className="container">
-      <h1>Chat page</h1>
+      <ChatDisplay />
     </div>
   );
 }
