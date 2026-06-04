@@ -1,4 +1,3 @@
-// filepath: /Users/millelauridsen/Desktop/Programmering/1. semester/GitHub/webapp-eksamen/src/main.jsx
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";

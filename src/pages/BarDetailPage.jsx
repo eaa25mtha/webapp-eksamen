@@ -36,55 +36,55 @@ export default function BarDetailPage() {
   const properties = [
     {
       field: "sport_prop",
-      icon: "/props/sport.svg",
+      icon: "${import.meta.env.BASE_URL}/props/sport.svg",
     },
     {
       field: "pool_prop",
-      icon: "/props/pool.svg",
+      icon: "${import.meta.env.BASE_URL}/props/pool.svg",
     },
     {
       field: "dart_prop",
-      icon: "/props/dart.svg",
+      icon: "${import.meta.env.BASE_URL}/props/dart.svg",
     },
     {
       field: "sitdown_prop",
-      icon: "/props/sitdown.svg",
+      icon: "${import.meta.env.BASE_URL}/props/sitdown.svg",
     },
     {
       field: "beer_prop",
-      icon: "/props/beer.svg",
+      icon: "${import.meta.env.BASE_URL}/props/beer.svg",
     },
     {
       field: "spil_prop",
-      icon: "/props/spil.svg",
+      icon: "${import.meta.env.BASE_URL}/props/spil.svg",
     },
     {
       field: "cocktails_prop",
-      icon: "/props/cocktails.svg",
+      icon: "${import.meta.env.BASE_URL}/props/cocktails.svg",
     },
     {
       field: "dj_prop",
-      icon: "/props/dj.svg",
+      icon: "${import.meta.env.BASE_URL}/props/dj.svg",
     },
     {
       field: "quiz_prop",
-      icon: "/props/quiz.svg",
+      icon: "${import.meta.env.BASE_URL}/props/quiz.svg",
     },
     {
       field: "floor_prop",
-      icon: "/props/floor.svg",
+      icon: "${import.meta.env.BASE_URL}/props/floor.svg",
     },
     {
       field: "studierabat_prop",
-      icon: "/props/studierabat.svg",
+      icon: "${import.meta.env.BASE_URL}/props/studierabat.svg",
     },
     {
       field: "livemusik_prop",
-      icon: "/props/livemusik.svg",
+      icon: "${import.meta.env.BASE_URL}/props/livemusik.svg",
     },
     {
       field: "karaoke_prop",
-      icon: "/props/karaoke.svg",
+      icon: "${import.meta.env.BASE_URL}/props/karaoke.svg",
     },
   ];
 
