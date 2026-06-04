@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MapDisplay from "./MapDisplay";
 import SearchBarDisplay from "./SearchBarDisplay";
 import SearchBar from "./SearchBar";
 import "../css/SearchBarToggle.css";
 
 export default function SearchContent() {
-  const [display, setDisplay] = useState("map");
+  const [display, setDisplay] = useState(() => {
+    return localStorage.getItem("display") || "map"; //local storage, hvis der er gemt en værdi, så brug den
+  });
   const [query, setQuery] = useState("");
+
+  //når display ændres, gemmes den nye værdi
+  useEffect(() => {
+    localStorage.setItem("display", display);
+  }, [display]);
 
   // skift til event
   function toggleDisplayEvent() {
