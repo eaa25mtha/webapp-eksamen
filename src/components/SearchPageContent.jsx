@@ -6,18 +6,18 @@ import "../css/SearchBarToggle.css";
 
 export default function SearchContent() {
   const [display, setDisplay] = useState(() => {
-    return localStorage.getItem("display") || "map"; //local storage, hvis der er gemt en værdi, så brug den
+    return localStorage.getItem("searchDisplay") || "map"; //local storage, hvis der er gemt en værdi, så brug den
   });
   const [query, setQuery] = useState("");
 
   //når display ændres, gemmes den nye værdi
   useEffect(() => {
-    localStorage.setItem("display", display);
+    localStorage.setItem("searchDisplay", display);
   }, [display]);
 
-  // skift til event
-  function toggleDisplayEvent() {
-    setDisplay("bar");
+  // skift til søg
+  function toggleDisplaySearch() {
+    setDisplay("søg");
   }
 
   // skift til kort
@@ -32,13 +32,13 @@ export default function SearchContent() {
 
       <div className="toggle-container">
         <button
-          className={`toggle-button ${display === "bar" ? "active" : ""}`}
-          onClick={toggleDisplayEvent}
+          className={`toggle-button ${display === "søg" ? "active" : ""}`}
+          onClick={toggleDisplaySearch}
         >
           <h3>Søg</h3>
         </button>
         <button
-          className={`toggle-button ${display === "map" ? "active" : ""}`}
+          className={`toggle-button  ${display === "map" ? "active" : ""}`}
           onClick={toggleDisplayMap}
         >
           <h3>Kort</h3>
