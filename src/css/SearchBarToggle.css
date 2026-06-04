@@ -18,6 +18,7 @@
 
 .search-input {
   height: 100%;
+  width: 100%; /* større touch target fordi kassen er 100% af bredden*/
   border: none;
   outline: none;
   padding: 0;
