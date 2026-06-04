@@ -55,7 +55,7 @@ export default function MapDisplay() {
           position={[bar.latitude, bar.longitude]}
           icon={
             new L.Icon({
-              iconUrl: bar.logo,
+              iconUrl: `${import.meta.env.BASE_URL}${bar.logo}`,
               iconSize: [56, 56],
               iconAnchor: [28, 28],
             })
@@ -67,7 +67,10 @@ export default function MapDisplay() {
               <div className="bar-details">
                 <div className="info-container">
                   <div className="info">
-                    <img src={bar.logo} alt={bar.name_bar} />
+                    <img
+                      src={`${import.meta.env.BASE_URL}${bar.logo}`}
+                      alt={bar.name_bar}
+                    />
                     <div>
                       <div className="info-details">
                         <p2>{bar.openstatus_bar}</p2>{" "}
