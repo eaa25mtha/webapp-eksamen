@@ -19,7 +19,10 @@ export default function BarCard({ bar }) {
         </div>
         <div className="container-right">
           {bar.logo ? (
-            <img src={bar.logo} alt={bar.name_bar} />
+            <img
+              src={`${import.meta.env.BASE_URL}${bar.logo}`}
+              alt={bar.name_bar}
+            />
           ) : (
             <div className="image-placeholder">?</div>
           )}

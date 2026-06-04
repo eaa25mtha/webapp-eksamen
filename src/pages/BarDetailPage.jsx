@@ -122,7 +122,11 @@ export default function BarDetailPage() {
         </div>
         <div>
           {bar?.logo && (
-            <img src={bar.logo} alt={bar.name_bar ?? "Bar logo"} width={100} />
+            <img
+              src={`${import.meta.env.BASE_URL}${bar.logo}`}
+              alt={bar.name_bar ?? "Bar logo"}
+              width={100}
+            />
           )}
         </div>
       </div>
