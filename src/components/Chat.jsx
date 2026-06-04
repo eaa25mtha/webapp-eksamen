@@ -1,5 +1,7 @@
 import "../css/Chat.css";
 import { useEffect, useState } from "react";
+import trash from "../assets/trash.svg";
+import send from "../assets/send.svg";
 
 // env variabler
 const URL = import.meta.env.VITE_SUPABASE_URL + "/messages";
@@ -102,7 +104,12 @@ export default function ChatPage() {
               <li key={message.id}>
                 <div className="message"> {message.text}</div>
 
-                <button onClick={() => deleteMessage(message.id)}>Slet</button>
+                <button
+                  className="trash"
+                  onClick={() => deleteMessage(message.id)}
+                >
+                  <img src={trash} alt="slet" />
+                </button>
               </li>
             ))}
           </div>
@@ -117,7 +124,9 @@ export default function ChatPage() {
               onChange={(e) => setInput(e.target.value)}
             />
 
-            <button onClick={sendMessage}>Send</button>
+            <button className="send" onClick={sendMessage}>
+              <img src={send} alt="send" />
+            </button>
           </div>
         </div>
       </div>

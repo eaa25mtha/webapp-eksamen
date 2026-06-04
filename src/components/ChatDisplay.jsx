@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Chat from "./Chat";
 import back from "../assets/back.svg";
+import "../css/Chat.css";
 
 export default function ChatDisplay() {
   const [activeChat, setActiveChat] = useState(false);
@@ -16,8 +17,8 @@ export default function ChatDisplay() {
   }
 
   return (
-    <div>
-      <button onClick={() => setActiveChat(!activeChat)}>
+    <div className="chatDisplay">
+      <button className="backbutton" onClick={() => setActiveChat(!activeChat)}>
         <img src={back} alt="tilbage" />
       </button>
       <Chat />
