@@ -25,7 +25,7 @@ export default function ErrorContent() {
             style={{
               width: "350px",
               height: "300px",
-              transform: "translate(-30px 40px)",
+              transform: "translateX(-30px)",
             }}
           />
         </div>
