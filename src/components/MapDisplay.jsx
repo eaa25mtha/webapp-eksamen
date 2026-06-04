@@ -104,7 +104,7 @@ export default function MapDisplay() {
               </div>
             </div>
             <div className="read-more">
-              <Link to={`/${bar.id}`}>
+              <Link to={`/bar/${bar.id}`}>
                 <button>Læs mere</button>
               </Link>
             </div>
