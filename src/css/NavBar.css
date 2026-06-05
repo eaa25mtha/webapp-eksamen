@@ -36,7 +36,7 @@ nav a img {
 .nav-indicator {
   position: absolute;
   top: 50%;
-  left: 12.5%;
+  left: 14%; /* under first link */
   transform: translate(-50%, -50%);
   width: 120px;
   height: 120px;
@@ -61,8 +61,4 @@ nav a:nth-child(3).active ~ .nav-indicator {
 }
 nav a:nth-child(4).active ~ .nav-indicator {
   left: 86%;
-}
-
-/* ingen default baggrund, indikatoren laver effekten */
-nav a.active {
 }

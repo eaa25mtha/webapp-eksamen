@@ -77,3 +77,11 @@
   margin-top: 16px;
   overflow: auto scroll;
 }
+
+.header-fav {
+  img {
+    display: flex;
+    position: absolute;
+    transform: translateY(-8px);
+  }
+}
