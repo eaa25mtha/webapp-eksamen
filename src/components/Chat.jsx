@@ -93,12 +93,12 @@ export default function ChatPage() {
 
   return (
     <div className="chat-container">
-      <div>
-        <h1>Bar chat</h1>
+      <div className="header">
+        <h1>Herr Bartels chat</h1>
       </div>
 
       <div>
-        <div>
+        <div className="message-container">
           <div className="message-list">
             {messages.map((message) => (
               <li key={message.id}>
