@@ -20,7 +20,7 @@ export default function Preboarding({ onFinish }) {
       {step === 3 && <Step3 onNext={nextStep} />}
       {step === 4 && <Step4 onNext={nextStep} />}
       {step === 5 && <Step5 onNext={nextStep} />}
-      {step === 7 && <Step7 onFinish={onFinish} />}
+      {step === 6 && <Step7 onFinish={onFinish} />}
     </div>
   );
 }
