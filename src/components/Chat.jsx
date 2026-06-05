@@ -102,14 +102,19 @@ export default function ChatPage() {
           <div className="message-list">
             {messages.map((message) => (
               <li key={message.id}>
-                <div className="message"> {message.text}</div>
+                <div className="besked-kasse">
+                  <div className="message"> {message.text}</div>
 
-                <button
-                  className="trash"
-                  onClick={() => deleteMessage(message.id)}
-                >
-                  <img src={trash} alt="slet" />
-                </button>
+                  <button
+                    className="trash"
+                    onClick={() => deleteMessage(message.id)}
+                  >
+                    <img src={trash} alt="slet" />
+                  </button>
+                </div>
+                <div>
+                  <p>{message.created_time}</p>
+                </div>
               </li>
             ))}
           </div>
