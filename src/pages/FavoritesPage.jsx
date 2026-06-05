@@ -10,7 +10,7 @@ const APIKEY = import.meta.env.VITE_SUPABASE_APIKEY;
 export default function FavoritesPage() {
   const [bars, setBars] = useState([]);
 
-  //henter data på barerne
+  //henter data fra supabase
   useEffect(() => {
     async function loadBars() {
       const response = await fetch(URL + "/bars", {

@@ -28,6 +28,8 @@ export default function SearchBarDisplay({ query }) {
     loadBars();
   }, []);
 
+  /*listen af barer filtreres ud fra søgning og bruger toLowerCase
+   så den ikke er sensitiv overfor store og små bogstaver*/
   const filteredBars = bars.filter(
     (bar) =>
       bar.name_bar?.toLowerCase().includes(query.toLowerCase()) ||

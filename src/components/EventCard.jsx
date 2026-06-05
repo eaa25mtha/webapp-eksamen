@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import "../css/Display.css";
 
+//hvis baren ikke har en class i css får den en default, den skal ikke være case sensitive
 export default function EventCard({ bar }) {
   const typeClass = bar.type
     ? bar.type.toLowerCase().replace(/\s+/g, "-")
     : "default";
 
+  //event cardets properties hentes fra supabase med template literals
   return (
     <Link to={`/bar/${bar.id}`} className={`card ${typeClass}`}>
       <div className="card-body">

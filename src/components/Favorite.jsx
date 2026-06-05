@@ -33,6 +33,7 @@ export default function Favorite({ isFavorite, barId, onToggle }) {
   }
 
   return (
+    //er den liked? gør den notliked, er den notliked?, gør den liked
     <img
       src={isFavorite ? Liked : NotLiked}
       alt={isFavorite ? "Remove from Favorites" : "Add to Favorites"}

@@ -66,7 +66,7 @@ export default function EventDisplay() {
 
   if (!bars) return <p>Loading...</p>;
 
-  //det der vises på homepage fra vores component, BarCard
+  //det der vises på homepage fra vores component
   return (
     <div className="display">
       <div className="filter-container">
