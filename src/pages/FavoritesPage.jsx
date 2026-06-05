@@ -30,11 +30,17 @@ export default function FavoritesPage() {
   const filteredBars = bars.filter((bar) => bar.favorite === true);
 
   if (filteredBars.length === 0) {
-    return <ErrorContent />;
+    return (
+      <div className="container">
+        <h1>Mine Favoritter</h1>
+        <ErrorContent />
+      </div>
+    );
   }
 
   return (
     <div className="container">
+      <h1>Mine Favoritter</h1>
       <div className="card-container">
         {filteredBars.map((bar) => (
           <div className="card-container">

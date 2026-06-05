@@ -36,7 +36,7 @@ nav a img {
 .nav-indicator {
   position: absolute;
   top: 50%;
-  left: 12.5%; /* under first link */
+  left: 14%; /* under first link */
   transform: translate(-50%, -50%);
   width: 120px;
   height: 120px;
