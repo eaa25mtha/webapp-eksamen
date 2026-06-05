@@ -13,7 +13,7 @@ export default function FavoritesPage() {
   const [bars, setBars] = useState([]);
   const navigate = useNavigate();
 
-  //henter data på barerne
+  //henter data fra supabase
   useEffect(() => {
     async function loadBars() {
       const response = await fetch(URL + "/bars", {

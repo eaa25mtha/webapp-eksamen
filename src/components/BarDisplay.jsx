@@ -43,6 +43,7 @@ export default function BarDisplay() {
     });
   }
 
+  //filtrering af barerne
   const knownTypes = ["Sportsbar", "Cocktailbar", "Natklub", "Ølbar"];
 
   const filteredBars =

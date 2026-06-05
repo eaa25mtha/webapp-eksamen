@@ -1,16 +1,47 @@
-# React + Vite
+WebApp eksamensprojekt:
+Mille Høj Lauridsen og Mathilde Tilsted Hansen
+Multimediedesign, 2. semester, IXD linjen
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vores projekt er bygget i React og deployet med GitHub Actions. Projektet er bygget som en SPA med én primær index.html side.
 
-Currently, two official plugins are available:
+I vores projekt har vi brugt samme byggestruktur som ses i Figma. Hele appen er bygget op af komponenter der genbruges på tværs af pages gennem export og import.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Hovedsider i projektet:
 
-## React Compiler
+- BarDetailPage
+- ChatPage
+- ErrorPage
+- FavoritesPage
+- HomePage
+- ProfilePage
+- SearchPage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Generel struktur:
 
-## Expanding the ESLint configuration
+I projektet bruger vi primært display funktioner, hvor vi viser vores indhold på siderne ved at bruge event handlers og conditionals. Derudover bruger vi state og props samt en integration til Supabase med CRUD metoden.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I projektet har vi brugt følgende react biblioteker:
+
+- useState, useEffect
+- lottie-react
+- leaflet
+- react
+- react-dom
+- react-router-dom
+
+Backend: Supabase, 2 tabeller (bars og messages)
+
+Arbejdsmetode og proces:
+
+Vi har bygget appen sammen gennem stort set hele processen. Vi har hver især lavet individuelle justeringer og styling, men vi har fortrinsvist siddet sammen og kodet langt det meste af tiden. Alle store funktioner og fetches mellem koden og Supabase er lavet sammen fra én computer. Vi har derved skiftedes til at sidde på en branch og arbejdet med den anden som sparringspartner.
+
+Implementerede funktioner i appen:
+
+- preboarding
+  (bygget med sessionstorage, for at simulere en virkelighedsnær app. Hvis den skal vises igen, skal appen lukkes helt og linket skal åbnes igen.)
+- Kategori-filtrering af barer og events (HomePage)
+- Toggle display knap med mulighed for at se events/barer eller søg/kort
+- Funktionel søgebar (under søg-displayet på searchpage)
+- Importeret kort med mulighed for zoom og med popup info
+- Funktionel favorit knap (favoriserede barer kan ses under "mine favoritter")
+- Chat funktion - med mulighed for selv at tilføje og slette beskeder

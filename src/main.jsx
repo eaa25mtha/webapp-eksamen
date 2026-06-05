@@ -15,6 +15,7 @@ function updateRootScale() {
   rootEl.style.transformOrigin = "center center";
 }
 
+//import af appen
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter basename={import.meta.env.BASE_URL}>

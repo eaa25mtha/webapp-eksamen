@@ -9,6 +9,7 @@ import Step7 from "./Step7";
 export default function Preboarding({ onFinish }) {
   const [step, setStep] = useState(1);
 
+  //tidligere step + 1, så der skiftes til næste step
   function nextStep() {
     setStep((prevStep) => prevStep + 1);
   }
