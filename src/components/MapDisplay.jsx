@@ -40,7 +40,7 @@ export default function MapDisplay() {
       center={[56.156, 10.208]} // Aarhus
       zoom={15}
       style={{
-        height: "80vh",
+        height: "580px",
         width: "100%",
       }}
     >
