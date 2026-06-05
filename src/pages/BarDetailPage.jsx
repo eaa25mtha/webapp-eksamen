@@ -17,6 +17,7 @@ export default function BarDetailPage() {
   const barId = Number(params?.id) || null;
   const navigate = useNavigate();
 
+  //data fetch fra supabase
   useEffect(() => {
     async function loadBar() {
       const response = await fetch(URL + "/bars", {

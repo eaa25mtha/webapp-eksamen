@@ -7,6 +7,7 @@ export default function BarCard({ bar }) {
     ? bar.type.toLowerCase().replace(/\s+/g, "-")
     : "default";
 
+  //henter bar id fra supabase med {`/bar/${bar.id}`}
   return (
     <Link to={`/bar/${bar.id}`} className={`card ${typeClass}`}>
       <div className="card-body">

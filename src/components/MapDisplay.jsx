@@ -34,6 +34,7 @@ export default function MapDisplay() {
     loadBars();
   }, []);
 
+  //leaflet kortet, med popup når der klikkes på bar-markerne, som har data fra Supabase
   return (
     <MapContainer
       center={[56.156, 10.208]} // Aarhus

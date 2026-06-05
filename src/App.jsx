@@ -11,6 +11,7 @@ import BarDetailPage from "./pages/BarDetailPage";
 import FavoritesPage from "./pages/FavoritesPage.jsx";
 import ErrorPage from "./pages/ErrorPage";
 
+//session storage, preboarding vises som det første når appen åbnes
 export default function App() {
   const [showOnboarding, setShowOnboarding] = useState(() => {
     const hasSeen = sessionStorage.getItem("seen");
@@ -23,10 +24,12 @@ export default function App() {
     return false;
   });
 
+  //preboarding lukkes efter første gennemgang
   function closeOnboarding() {
     setShowOnboarding(false);
   }
 
+  //returner resten af appen efter preboarding er set
   return (
     <>
       {showOnboarding ? (

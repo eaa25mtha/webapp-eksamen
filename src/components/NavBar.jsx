@@ -12,6 +12,7 @@ export default function NavBar() {
     localStorage.getItem("activeTab") || "home",
   );
 
+  //gem state i local storage, brugerens valg gemmes ved reload
   useEffect(() => {
     localStorage.setItem("activeTab", activeTab);
   }, [activeTab]);
