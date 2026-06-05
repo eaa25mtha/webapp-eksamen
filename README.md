@@ -37,7 +37,6 @@ Vi har bygget appen sammen gennem stort set hele processen. Vi har hver især la
 
 Implementerede funktioner i appen:
 
-- Dynamisk database
 - preboarding
   (bygget med sessionstorage, for at simulere en virkelighedsnær app. Hvis den skal vises igen, skal appen lukkes helt og linket skal åbnes igen.)
 - Kategori-filtrering af barer og events (HomePage)
