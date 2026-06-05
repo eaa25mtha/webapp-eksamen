@@ -62,9 +62,7 @@ export default function FavoritesPage() {
       </div>
       <div className="card-container">
         {filteredBars.map((bar) => (
-          <div className="card-container">
-            <BarCard key={bar.id} bar={bar} />
-          </div>
+          <BarCard key={bar.id} bar={bar} />
         ))}
       </div>
     </div>
